@@ -1,4 +1,5 @@
-heroku101-slides
-================
+kursresponsivedesign
+====================
 
-Slides for our Heroku 101 course for Capgemini. The slides run on Heroku, of course.
+kurs_responsivedesign
+
