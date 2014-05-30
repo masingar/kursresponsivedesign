@@ -35,55 +35,18 @@
 
             <div class="slides">
 
-                
-                    
-                        
-    <section data-markdown="slides/index.md"></section>
-
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/intro.html"></section>
-
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/nodejs.html"></section>
-
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/typografi.html"></section>
-
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/media-queries.html"></section>
-
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/oppgaver.html"></section>
-
-
-                    
-                    
-                
+                <% _.forEach(slides, function(slide) { %>
+                    <% if (!_.isArray(slide)) { %>
+                        <%= section(slide) %>
+                    <% } %>
+                    <% if (_.isArray(slide)) { %>
+                        <section>
+                            <% _.forEach(slide, function(verticalslide) { %>
+                                <%= section(verticalslide) %>
+                            <% }); %>
+                        </section>
+                    <% } %>
+                <% }); %>
             </div>
 
         </div>
