@@ -116,6 +116,8 @@ module.exports = (grunt) ->
             'copy'
         ]
 
+    grunt.registerTask('heroku:development', 'clean less mincss');
+
     # Define default task.
     grunt.registerTask 'default', [
         'test'
